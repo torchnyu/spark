@@ -1,6 +1,5 @@
-import Head from "next/head";
+import React from "react"
 import { createUseStyles } from "react-jss";
-import PageLayout from "../components/PageLayout";
 
 const useStyles = createUseStyles({
   squares: {
@@ -39,15 +38,9 @@ const useStyles = createUseStyles({
   },
 });
 
-export default function Home() {
+export default function HomePage() {
   const classes = useStyles();
   return (
-    <div>
-      <Head>
-        <title>SPARK: A Torch Mentorship Program</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <PageLayout>
         <div className={classes.squares}>
           <div className={classes.orangeSquare}>
             <div className={classes.darkOrangeSquare}>
@@ -55,7 +48,5 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </PageLayout>
-    </div>
   );
 }

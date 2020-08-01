@@ -1,8 +1,13 @@
-import Link from "next/link";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom"
 import { createUseStyles } from "react-jss";
+import HomePage from "./HomePage";
+import AboutPage from "./AboutPage";
+import NotFoundPage from "./NotFoundPage";
 
 const useStyles = createUseStyles({
   Home: {
+    fontFamily: "Source Sans Pro",
     display: "grid",
     gridTemplateColumns: "minmax(250px, 1fr) 3fr minmax(250px, 1fr)",
     backgroundColor: "#F3B924",
@@ -19,6 +24,8 @@ const useStyles = createUseStyles({
     fontWeight: 600,
     margin: "0",
     minWidth: "150px",
+    textDecoration: "none",
+    color: "black",
     "&:hover": {
       textDecoration: "underline",
     },
@@ -72,28 +79,44 @@ const useStyles = createUseStyles({
   },
 });
 
-export default function PageLayout({ children }) {
+function App() {
   const classes = useStyles();
   return (
+    <Router>
     <main className={classes.Home}>
       <div className={classes.header}>
-        <Link href="/">
+        <Link to="/">
           <h1 className={classes.title}>SPARK</h1>
         </Link>
         <h2 className={classes.subtitle}> A Torch Mentorship Program</h2>
       </div>
-      <div>{children}</div>
+      <div><Switch>
+        <Route exact path="/">
+          <HomePage/>
+        </Route>
+        <Route path="/about">
+          <AboutPage/>
+        </Route>
+        <Route path="/404">
+          <NotFoundPage />
+        </Route>
+        <Redirect to={"/404"}/>
+      </Switch></div>
       <div className={classes.links}>
-        <a href="/about" className={classes.anchor}>
+        <Link to="/about" className={classes.anchor}>
           <h3 className={classes.link}>About </h3>
-        </a>
-        <a href="/projects" className={classes.anchor}>
+        </Link>
+        <Link to="/projects" className={classes.anchor}>
           <h3 className={classes.link}>Projects</h3>
-        </a>
-        <a href="/join" className={classes.anchor}>
+        </Link>
+        <Link to="/join" className={classes.anchor}>
           <h3 className={classes.link}>Join Us</h3>
-        </a>
+        </Link>
       </div>
     </main>
+    </Router>
   );
 }
+
+
+export default App;

@@ -1,9 +1,8 @@
+import React from "react";
 import { createUseStyles } from "react-jss";
-import Head from "next/head";
-import PageLayout from "../components/PageLayout";
 
 const useStyles = createUseStyles({
-  About: {
+  AboutPage: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -32,16 +31,10 @@ const useStyles = createUseStyles({
     maxWidth: "min(600px, 35vw)",
   },
 });
-export default function About() {
+export default function AboutPage() {
   const classes = useStyles();
   return (
-    <div className="container">
-      <Head>
-        <title>About | SPARK: A Torch Mentorship Program</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <PageLayout>
-        <div className={classes.About}>
+        <div className={classes.AboutPage}>
           <div className={classes.orangeSquare}>
             <h1 className={classes.title}> About </h1>
             <p className={classes.paragraph}>
@@ -59,7 +52,5 @@ export default function About() {
             </p>
           </div>
         </div>
-      </PageLayout>
-    </div>
   );
 }
