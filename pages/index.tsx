@@ -56,20 +56,6 @@ export default function Home() {
           </div>
         </div>
       </PageLayout>
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont,
-            Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-            Helvetica Neue, sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   );
 }

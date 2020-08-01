@@ -19,6 +19,9 @@ const useStyles = createUseStyles({
     fontWeight: 600,
     margin: "0",
     minWidth: "150px",
+    "&:hover": {
+      textDecoration: "underline",
+    },
   },
   subtitle: {
     fontWeight: 500,
@@ -75,7 +78,7 @@ export default function PageLayout({ children }) {
         </Link>
         <h2 className={classes.subtitle}> A Torch Mentorship Program</h2>
       </div>
-      {children}
+      <div>{children}</div>
       <div className={classes.links}>
         <Link href="/about">
           <h3 className={classes.link}>About </h3>

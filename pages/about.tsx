@@ -29,7 +29,7 @@ const useStyles = createUseStyles({
   paragraph: {
     fontSize: "1.1em",
     lineHeight: "1.3em",
-    maxWidth: "600px",
+    maxWidth: "min(600px, 35vw)",
   },
 });
 export default function About() {
@@ -60,20 +60,6 @@ export default function About() {
           </div>
         </div>
       </PageLayout>
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont,
-            Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-            Helvetica Neue, sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   );
 }
