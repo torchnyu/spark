@@ -43,6 +43,10 @@ const useStyles = createUseStyles({
       textDecoration: "underline",
     },
   },
+  anchor: {
+    textDecoration: "none",
+    color: "black",
+  },
   "@media(max-width: 1200px)": {
     Home: {
       display: "flex",
@@ -80,15 +84,15 @@ export default function PageLayout({ children }) {
       </div>
       <div>{children}</div>
       <div className={classes.links}>
-        <Link href="/about">
+        <a href="/about" className={classes.anchor}>
           <h3 className={classes.link}>About </h3>
-        </Link>
-        <Link href="/projects">
+        </a>
+        <a href="/projects" className={classes.anchor}>
           <h3 className={classes.link}>Projects</h3>
-        </Link>
-        <Link href="/join">
+        </a>
+        <a href="/join" className={classes.anchor}>
           <h3 className={classes.link}>Join Us</h3>
-        </Link>
+        </a>
       </div>
     </main>
   );
