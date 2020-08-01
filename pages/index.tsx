@@ -5,7 +5,7 @@ import Link from "next/link";
 const useStyles = createUseStyles({
   Home: {
     display: "grid",
-    gridTemplateColumns: "1fr 3fr 1fr",
+    gridTemplateColumns: "minmax(250px, 1fr) 3fr minmax(250px, 1fr)",
     backgroundColor: "#F3B924",
     minHeight: "100vh",
   },
@@ -19,13 +19,13 @@ const useStyles = createUseStyles({
     fontSize: "3em",
     fontWeight: 600,
     margin: "0",
-    width: "min(250px, 20vw)",
+    minWidth: "150px",
   },
   subtitle: {
     fontWeight: 500,
     fontSize: "2em",
     margin: "0",
-    maxWidth: "250px",
+    maxWidth: "150px",
   },
   squares: {
     display: "flex",
@@ -33,8 +33,8 @@ const useStyles = createUseStyles({
     alignItems: "center",
   },
   orangeSquare: {
-    width: "min(60vw, 90vh)",
-    height: "min(60vw, 90vh)",
+    width: "45vw",
+    height: "45vw",
     backgroundColor: "#F66717",
     margin: {
       top: "8vh",
@@ -47,8 +47,8 @@ const useStyles = createUseStyles({
   },
   darkOrangeSquare: {
     backgroundColor: "#E05A0F",
-    width: "min(40vw, 70vh)",
-    height: "min(40vw, 70vh)",
+    width: "35vw",
+    height: "35vw",
     marginBottom: "3vh",
     display: "flex",
     flexDirection: "column",
@@ -56,8 +56,8 @@ const useStyles = createUseStyles({
     justifyContent: "flex-end",
   },
   redSquare: {
-    width: "min(22vw, 52vh)",
-    height: "min(22vw, 52vh)",
+    width: "25vw",
+    height: "25vw",
     backgroundColor: "#F0450F",
     marginBottom: "3vh",
   },
@@ -75,7 +75,7 @@ const useStyles = createUseStyles({
       textDecoration: "underline",
     },
   },
-  "@media(max-width: 1000px)": {
+  "@media(max-width: 1200px)": {
     Home: {
       display: "flex",
       flexDirection: "column",
@@ -89,6 +89,9 @@ const useStyles = createUseStyles({
     },
     subtitle: {
       maxWidth: "500px",
+    },
+    link: {
+      textDecoration: "underline",
     },
     links: {
       flexDirection: "row",
