@@ -2,11 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const render = () => {
   const App = require("./App").default;
   ReactDOM.render(
-      <App />,
+    <Router>
+      <App />
+    </Router>,
     document.getElementById("root")
   );
 };

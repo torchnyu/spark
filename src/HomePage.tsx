@@ -2,7 +2,7 @@ import React from "react"
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  squares: {
+  HomePage: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -41,7 +41,7 @@ const useStyles = createUseStyles({
 export default function HomePage() {
   const classes = useStyles();
   return (
-        <div className={classes.squares}>
+        <div className={classes.HomePage}>
           <div className={classes.orangeSquare}>
             <div className={classes.darkOrangeSquare}>
               <div className={classes.redSquare} />

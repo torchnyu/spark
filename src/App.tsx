@@ -1,17 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom"
+import {
+  Switch, Route, Link, Redirect, useLocation } from "react-router-dom"
 import { createUseStyles } from "react-jss";
 import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
 import NotFoundPage from "./NotFoundPage";
+import ProjectsPage from "./ProjectsPage";
 
 const useStyles = createUseStyles({
-  Home: {
+  App: {
     fontFamily: "Source Sans Pro",
     display: "grid",
     gridTemplateColumns: "minmax(250px, 1fr) 3fr minmax(250px, 1fr)",
     backgroundColor: "#F3B924",
-    minHeight: "100vh",
+    minHeight: "100vh"
   },
   header: {
     display: "flex",
@@ -19,10 +21,13 @@ const useStyles = createUseStyles({
     alignItems: "center",
   },
   title: {
-    paddingTop: "max(40px, 10vh)",
+    margin: {
+      top: "max(40px, 10vh)",
+      left: "0",
+      bottom: "0"
+    },
     fontSize: "3em",
     fontWeight: 600,
-    margin: "0",
     minWidth: "150px",
     textDecoration: "none",
     color: "black",
@@ -54,8 +59,11 @@ const useStyles = createUseStyles({
     textDecoration: "none",
     color: "black",
   },
+  activeLink: {
+    fontWeight: 700
+  },
   "@media(max-width: 1200px)": {
-    Home: {
+    App: {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -79,11 +87,15 @@ const useStyles = createUseStyles({
   },
 });
 
+
 function App() {
+  const location = useLocation();
+  function styleLink(path: string) {
+    return location.pathname === path ? { fontWeight: 700 } : {}
+  }
   const classes = useStyles();
   return (
-    <Router>
-    <main className={classes.Home}>
+    <main className={classes.App}>
       <div className={classes.header}>
         <Link to="/">
           <h1 className={classes.title}>SPARK</h1>
@@ -97,6 +109,9 @@ function App() {
         <Route path="/about">
           <AboutPage/>
         </Route>
+        <Route path="/projects">
+          <ProjectsPage/>
+        </Route>
         <Route path="/404">
           <NotFoundPage />
         </Route>
@@ -104,17 +119,16 @@ function App() {
       </Switch></div>
       <div className={classes.links}>
         <Link to="/about" className={classes.anchor}>
-          <h3 className={classes.link}>About </h3>
+          <h3 style={styleLink("/about")} className={classes.link}>About </h3>
         </Link>
         <Link to="/projects" className={classes.anchor}>
-          <h3 className={classes.link}>Projects</h3>
+          <h3 style={styleLink("/projects")} className={classes.link}>Projects</h3>
         </Link>
         <Link to="/join" className={classes.anchor}>
-          <h3 className={classes.link}>Join Us</h3>
+          <h3 style={styleLink("/join")} className={classes.link}>Join Us</h3>
         </Link>
       </div>
     </main>
-    </Router>
   );
 }
 

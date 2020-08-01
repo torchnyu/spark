@@ -15,7 +15,7 @@ const useStyles = createUseStyles({
       top: "8vh",
       bottom: "4vh",
     },
-    backgroundColor: "#F66717",
+//    backgroundColor: "#F66717",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -24,13 +24,17 @@ const useStyles = createUseStyles({
   title: {
     fontSize: "2.5em",
     fontWeight: 400,
+    textAlign: "left",
+    width: "80%"
   },
   paragraph: {
+    textAlign: "left",
     fontSize: "1.1em",
     lineHeight: "1.3em",
     maxWidth: "min(600px, 35vw)",
   },
 });
+
 export default function AboutPage() {
   const classes = useStyles();
   return (
