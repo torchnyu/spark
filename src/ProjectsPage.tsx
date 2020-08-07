@@ -1,7 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import alberta from "./alberta.png";
-import githublogo from "./GitHub-Mark-32px.png";
+import githubLogo from "./GitHub-Mark-32px.png";
+
 const useStyles = createUseStyles({
   ProjectsPage: {
     display: "grid",
@@ -15,12 +16,11 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     flexFlow: "row nowrap",
     backgroundColor: "white",
-    border: "1px solid",
+    maxWidth: "400px",
     borderRadius: "3px 3px 3px 3px",
-    boxShadow: "0 4px 6px 0",
+    boxShadow: "2px 3px 18px -6px rgba(0,0,0,0.75)",
     justifyContent: "flex-start",
-    padding: "10px",
-    textAlign: "center",
+    padding: "30px",
   },
   title: {
     position: "relative",
@@ -36,7 +36,6 @@ const useStyles = createUseStyles({
   },
   description: {
     position: "relative",
-    textAlign: "center",
   },
   LinkContainer: {
     fontSize: "small",
@@ -53,6 +52,10 @@ const useStyles = createUseStyles({
   },
   link: {
     padding: "0 0 0 3px"
+  },
+  repoLink: {
+    display: "flex",
+    alignItems: "center"
   }
 });
 
@@ -67,21 +70,18 @@ export default function ProjectsPage() {
           </a>
         </h1>
         <img src={alberta} className={classes.image} alt="project img"/>
-        <div className={classes.description}>
-          <p>
-            Alberta is a front-end project for
+        <p className={classes.description}>
+          Alberta is a front-end project for
             <a href="https://github.com/BUGS-NYU/schedge" className={classes.link}>
               Schedge API
-            </a>, automatically generating freshman schedule for
-            NYU CAS student. We want to offer this as a learning experience for new
-            programmers to learn about web application development as well as
-            open source contributions.
-          </p>
-        </div>
+            </a>, automatically generating schedules for NYU CAS freshmen. We
+          designed this project as a learning experience for new programmers to
+          learn about front-end development as well as open source.
+        </p>
         <div className={classes.LinkContainer}>
           <p className={classes.Footer}>
-            <a href="https://github.com/BUGS-NYU/freshman-schedge-generator">
-              <img src={githublogo} className={classes.Logo} alt="github logo"/>
+            <a className={classes.repoLink} href="https://github.com/BUGS-NYU/freshman-schedge-generator">
+              <img src={githubLogo} className={classes.Logo} alt="github logo"/>
               github.com/BUGS-NYU/freshman-schedge-generator
             </a>
           </p>
