@@ -3,12 +3,22 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import red from "@material-ui/core/colors/red";
+
 
 const render = () => {
   const App = require("./App").default;
+  const theme = createMuiTheme({
+    palette: {
+      primary: red
+    }
+  });
   ReactDOM.render(
     <Router>
+      <ThemeProvider theme={theme}>
       <App />
+      </ThemeProvider>
     </Router>,
     document.getElementById("root")
   );

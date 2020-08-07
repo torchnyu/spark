@@ -6,6 +6,7 @@ import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
 import NotFoundPage from "./NotFoundPage";
 import ProjectsPage from "./ProjectsPage";
+import JoinUsPage from "./JoinUsPage";
 
 const useStyles = createUseStyles({
   App: {
@@ -42,7 +43,7 @@ const useStyles = createUseStyles({
     maxWidth: "150px",
   },
   links: {
-    paddingTop: "max(40px, 10vh)",
+    marginTop: "max(40px, 10vh)",
     display: "flex",
     flexDirection: "column",
     paddingLeft: "20px",
@@ -70,9 +71,10 @@ const useStyles = createUseStyles({
     },
     header: {
       textAlign: "center",
+      margin: "0"
     },
     title: {
-      paddingTop: "20px",
+      marginTop: "20px",
     },
     subtitle: {
       maxWidth: "500px",
@@ -81,8 +83,12 @@ const useStyles = createUseStyles({
       textDecoration: "underline",
     },
     links: {
+      margin: {
+        top: "0",
+        bottom: "40px"
+      },
       flexDirection: "row",
-      paddingTop: "20px",
+      fontSize: "0.8rem",
     },
   },
 });
@@ -111,6 +117,9 @@ function App() {
         </Route>
         <Route path="/projects">
           <ProjectsPage/>
+        </Route>
+        <Route path="/join">
+          <JoinUsPage/>
         </Route>
         <Route path="/404">
           <NotFoundPage />

@@ -8,14 +8,13 @@ const useStyles = createUseStyles({
     alignItems: "center",
     justifyContent: "flex-end",
   },
-  orangeSquare: {
+  content: {
     width: "45vw",
     height: "45vw",
     margin: {
       top: "8vh",
       bottom: "4vh",
     },
-//    backgroundColor: "#F66717",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -33,13 +32,23 @@ const useStyles = createUseStyles({
     lineHeight: "1.3em",
     maxWidth: "min(600px, 35vw)",
   },
+  "@media(max-width: 1200px)": {
+    content: {
+      width: "80vw",
+      height: "auto",
+      margin: "0"
+    },
+    paragraph: {
+      maxWidth: "80vw"
+    }
+  }
 });
 
 export default function AboutPage() {
   const classes = useStyles();
   return (
         <div className={classes.AboutPage}>
-          <div className={classes.orangeSquare}>
+          <div className={classes.content}>
             <h1 className={classes.title}> About </h1>
             <p className={classes.paragraph}>
               Spark is a mentorship program run by TorchNYU, an organization
