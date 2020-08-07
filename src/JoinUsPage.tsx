@@ -26,6 +26,15 @@ const useStyles = createUseStyles({
   message: {
     color: "#005700",
     padding: "10px"
+  },
+  '@media(max-width: 700px)': {
+    JoinUsPage: {
+      maxWidth: "80vw",
+      margin: {
+        top: "20px",
+        bottom: "20px"
+      }
+    }
   }
 });
 

@@ -36,6 +36,20 @@ const useStyles = createUseStyles({
     backgroundColor: "#F0450F",
     marginBottom: "3vh",
   },
+  '@media(max-width: 700px)': {
+    orangeSquare: {
+      width: "70vw",
+      height: "70vw"
+    },
+    darkOrangeSquare: {
+      width: "52vw",
+      height: "52vw"
+    },
+    redSquare: {
+      width: "35vw",
+      height: "35vw"
+    }
+  }
 });
 
 export default function HomePage() {
