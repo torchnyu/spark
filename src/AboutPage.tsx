@@ -9,11 +9,19 @@ const useStyles = createUseStyles({
     justifyContent: "flex-end",
   },
   content: {
-    width: "45vw",
-    height: "45vw",
+    backgroundColor: "white",
+    borderRadius: "5px",
+    boxShadow: "2px 3px 18px -6px rgba(0,0,0,0.75)",
+    maxWidth: "400px",
+    padding: {
+      left: "40px",
+      right: "40px",
+      bottom: "40px",
+      top: "20px"
+    },
     margin: {
       top: "8vh",
-      bottom: "4vh",
+      bottom: "3vh",
     },
     display: "flex",
     flexDirection: "column",
@@ -21,8 +29,6 @@ const useStyles = createUseStyles({
     textAlign: "center",
   },
   title: {
-    fontSize: "2.5em",
-    fontWeight: 400,
     textAlign: "left",
     width: "80%"
   },
@@ -30,16 +36,14 @@ const useStyles = createUseStyles({
     textAlign: "left",
     fontSize: "1.1em",
     lineHeight: "1.3em",
-    maxWidth: "min(600px, 35vw)",
+    maxWidth: "min(400px, 35vw)",
   },
-  "@media(max-width: 1200px)": {
+  "@media(max-width: 1000px)": {
     content: {
-      width: "80vw",
-      height: "auto",
-      margin: "0"
-    },
-    paragraph: {
-      maxWidth: "80vw"
+      margin: {
+        top: "40px",
+        bottom: "40px"
+      }
     }
   }
 });

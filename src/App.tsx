@@ -63,7 +63,7 @@ const useStyles = createUseStyles({
   activeLink: {
     fontWeight: 700
   },
-  "@media(max-width: 1200px)": {
+  "@media(max-width: 1000px)": {
     App: {
       display: "flex",
       flexDirection: "column",

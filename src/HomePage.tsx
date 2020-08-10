@@ -36,7 +36,7 @@ const useStyles = createUseStyles({
     backgroundColor: "#F0450F",
     marginBottom: "3vh",
   },
-  '@media(max-width: 700px)': {
+  '@media(max-width: 1000px)': {
     orangeSquare: {
       width: "70vw",
       height: "70vw"
