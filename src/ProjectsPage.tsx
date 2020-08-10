@@ -6,9 +6,8 @@ import githubLogo from "./GitHub-Mark-32px.png";
 const useStyles = createUseStyles({
   ProjectsPage: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
-    gridGap: "20px",
-    justifyItems: "stretch",
+    marginTop: "8vh",
+    placeItems: "center",
     margin: "20px",
   },
   Project: {
@@ -17,7 +16,7 @@ const useStyles = createUseStyles({
     flexFlow: "row nowrap",
     backgroundColor: "white",
     maxWidth: "400px",
-    borderRadius: "3px 3px 3px 3px",
+    borderRadius: "5px",
     boxShadow: "2px 3px 18px -6px rgba(0,0,0,0.75)",
     justifyContent: "flex-start",
     padding: "30px",
@@ -47,7 +46,7 @@ const useStyles = createUseStyles({
     textAlign: "center",
   },
   Logo: {
-    margin: "0px 5px 0px 0px",
+    margin: "0px 8px 0px 0px",
     width: "24px",
   },
   link: {
@@ -63,6 +62,7 @@ export default function ProjectsPage() {
   const classes = useStyles();
   return (
     <div className={classes.ProjectsPage}>
+      <h1> Projects </h1>
       <div className={classes.Project}>
         <h1 className={classes.title}>
           <a href="https://alberta.ml">
@@ -71,12 +71,12 @@ export default function ProjectsPage() {
         </h1>
         <img src={alberta} className={classes.image} alt="project img"/>
         <p className={classes.description}>
-          Alberta is a front-end project for
+          Alberta is a front-end project for the
             <a href="https://github.com/BUGS-NYU/schedge" className={classes.link}>
               Schedge API
-            </a>, automatically generating schedules for NYU CAS freshmen. We
-          designed this project as a learning experience for new programmers to
-          learn about front-end development as well as open source.
+            </a>. It automatically generates schedules for NYU CAS freshmen. We
+          designed this project for new programmers to learn about front-end as
+          well as open source development.
         </p>
         <div className={classes.LinkContainer}>
           <p className={classes.Footer}>
