@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
       left: "40px",
       right: "40px",
       bottom: "40px",
-      top: "20px"
+      top: "20px",
     },
     margin: {
       top: "8vh",
@@ -25,12 +25,9 @@ const useStyles = createUseStyles({
     },
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
   },
   title: {
     textAlign: "left",
-    width: "80%"
   },
   paragraph: {
     textAlign: "left",
@@ -42,32 +39,32 @@ const useStyles = createUseStyles({
     content: {
       margin: {
         top: "40px",
-        bottom: "40px"
-      }
-    }
-  }
+        bottom: "40px",
+      },
+    },
+  },
 });
 
 export default function AboutPage() {
   const classes = useStyles();
   return (
-        <div className={classes.AboutPage}>
-          <div className={classes.content}>
-            <h1 className={classes.title}> About </h1>
-            <p className={classes.paragraph}>
-              Spark is a mentorship program run by TorchNYU, an organization
-              dedicated towards improving NYU CS, and BUGS, NYU's open source
-              development club.
-            </p>
-            <p className={classes.paragraph}>
-              We teach students practical and pragmatic software development
-              through working on and shipping projects.
-            </p>
-            <p className={classes.paragraph}>
-              Some of the technologies we use include React, JavaScript, JSS and
-              many others
-            </p>
-          </div>
-        </div>
+    <div className={classes.AboutPage}>
+      <div className={classes.content}>
+        <h1 className={classes.title}> About </h1>
+        <p className={classes.paragraph}>
+          Spark is a mentorship program run by TorchNYU, an organization
+          dedicated towards improving NYU CS, and BUGS, NYU's open source
+          development club.
+        </p>
+        <p className={classes.paragraph}>
+          We teach students practical and pragmatic software development through
+          working on and shipping projects.
+        </p>
+        <p className={classes.paragraph}>
+          Some of the technologies we use include React, JavaScript, JSS and
+          many others
+        </p>
+      </div>
+    </div>
   );
 }
