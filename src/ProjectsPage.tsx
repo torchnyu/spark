@@ -10,6 +10,16 @@ const useStyles = createUseStyles({
     placeItems: "center",
     margin: "20px",
   },
+  projectsInfo: {
+    backgroundColor: "white",
+    borderRadius: "5px",
+    boxShadow: "2px 3px 18px -6px rgba(0,0,0,0.75)",
+    padding: "40px",
+    margin: "40px"
+  },
+  infoParagraph: {
+    maxWidth: "400px",
+  },
   Project: {
     display: "flex",
     flexDirection: "column",
@@ -55,6 +65,14 @@ const useStyles = createUseStyles({
   repoLink: {
     display: "flex",
     alignItems: "center"
+  },
+  '@media(max-width: 1000px)': {
+    ProjectsPage: {
+      margin: {
+        top: "40px",
+        bottom: "40px"
+      }
+    }
   }
 });
 
@@ -62,7 +80,13 @@ export default function ProjectsPage() {
   const classes = useStyles();
   return (
     <div className={classes.ProjectsPage}>
+      <div className={classes.projectsInfo}>
       <h1> Projects </h1>
+        <p className={classes.infoParagraph}>
+          All projects are designed, implemented and deployed by Torch mentees.
+          Mentors advise, but do not work on the projects themselves.
+        </p>
+      </div>
       <div className={classes.Project}>
         <h1 className={classes.title}>
           <a href="https://alberta.ml">
