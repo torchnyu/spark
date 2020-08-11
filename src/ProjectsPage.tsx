@@ -30,6 +30,7 @@ const useStyles = createUseStyles({
     boxShadow: "2px 3px 18px -6px rgba(0,0,0,0.75)",
     justifyContent: "flex-start",
     padding: "30px",
+    margin: "10px"
   },
   title: {
     position: "relative",
@@ -45,6 +46,7 @@ const useStyles = createUseStyles({
   },
   description: {
     position: "relative",
+    textAlign: "center"
   },
   LinkContainer: {
     fontSize: "small",
@@ -53,14 +55,15 @@ const useStyles = createUseStyles({
   Footer: {
     boxSizing: "inherit",
     fontSize: "small",
-    textAlign: "center",
+    display: "flex",
+    justifyContent: "center"
   },
   Logo: {
     margin: "0px 8px 0px 0px",
     width: "24px",
   },
   link: {
-    padding: "0 0 0 3px"
+    padding: "0 0 0 3px",
   },
   repoLink: {
     display: "flex",
@@ -111,6 +114,31 @@ export default function ProjectsPage() {
           </p>
         </div>
       </div>
+      <div className={classes.Project}>
+        <h1 className={classes.title}>
+          <a href="https://alberta.ml">
+            Alberta.ml
+          </a>
+        </h1>
+        <img src={alberta} className={classes.image} alt="project img"/>
+        <p className={classes.description}>
+          Alberta is a front-end project for the
+            <a href="https://github.com/BUGS-NYU/schedge" className={classes.link}>
+              Schedge API
+            </a>. It automatically generates schedules for NYU CAS freshmen. We
+          designed this project for new programmers to learn about front-end as
+          well as open source development.
+        </p>
+        <div className={classes.LinkContainer}>
+          <p className={classes.Footer}>
+            <a className={classes.repoLink} href="https://github.com/BUGS-NYU/freshman-schedge-generator">
+              <img src={githubLogo} className={classes.Logo} alt="github logo"/>
+              github.com/BUGS-NYU/freshman-schedge-generator
+            </a>
+          </p>
+        </div>
+      </div>
+
     </div>
   );
 }
