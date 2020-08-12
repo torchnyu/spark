@@ -15,7 +15,7 @@ const useStyles = createUseStyles({
     borderRadius: "5px",
     boxShadow: "2px 3px 18px -6px rgba(0,0,0,0.75)",
     padding: "40px",
-    margin: "40px"
+    margin: "40px",
   },
   infoParagraph: {
     maxWidth: "400px",
@@ -30,7 +30,7 @@ const useStyles = createUseStyles({
     boxShadow: "2px 3px 18px -6px rgba(0,0,0,0.75)",
     justifyContent: "flex-start",
     padding: "30px",
-    margin: "10px"
+    margin: "10px",
   },
   title: {
     position: "relative",
@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
   },
   description: {
     position: "relative",
-    textAlign: "center"
+    textAlign: "center",
   },
   LinkContainer: {
     fontSize: "small",
@@ -56,7 +56,7 @@ const useStyles = createUseStyles({
     boxSizing: "inherit",
     fontSize: "small",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   Logo: {
     margin: "0px 8px 0px 0px",
@@ -67,16 +67,16 @@ const useStyles = createUseStyles({
   },
   repoLink: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
-  '@media(max-width: 1000px)': {
+  "@media(max-width: 1000px)": {
     ProjectsPage: {
       margin: {
         top: "40px",
-        bottom: "40px"
-      }
-    }
-  }
+        bottom: "40px",
+      },
+    },
+  },
 });
 
 export default function ProjectsPage() {
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
   return (
     <div className={classes.ProjectsPage}>
       <div className={classes.projectsInfo}>
-      <h1> Projects </h1>
+        <h1> Projects </h1>
         <p className={classes.infoParagraph}>
           All projects are designed, implemented and deployed by Torch mentees.
           Mentors advise, but do not work on the projects themselves.
@@ -92,53 +92,37 @@ export default function ProjectsPage() {
       </div>
       <div className={classes.Project}>
         <h1 className={classes.title}>
-          <a href="https://alberta.ml">
-            Alberta.ml
-          </a>
+          <a href="https://alberta.ml">Alberta.ml</a>
         </h1>
-        <img src={alberta} className={classes.image} alt="project img"/>
+        <img src={alberta} className={classes.image} alt="project img" />
         <p className={classes.description}>
           Alberta is a front-end project for the
-            <a href="https://github.com/BUGS-NYU/schedge" className={classes.link}>
-              Schedge API
-            </a>. It automatically generates schedules for NYU CAS freshmen. We
+          <a
+            href="https://github.com/BUGS-NYU/schedge"
+            className={classes.link}
+          >
+            Schedge API
+          </a>
+          . It automatically generates schedules for NYU CAS freshmen. We
           designed this project for new programmers to learn about front-end as
           well as open source development.
         </p>
         <div className={classes.LinkContainer}>
           <p className={classes.Footer}>
-            <a className={classes.repoLink} href="https://github.com/BUGS-NYU/freshman-schedge-generator">
-              <img src={githubLogo} className={classes.Logo} alt="github logo"/>
+            <a
+              className={classes.repoLink}
+              href="https://github.com/BUGS-NYU/freshman-schedge-generator"
+            >
+              <img
+                src={githubLogo}
+                className={classes.Logo}
+                alt="github logo"
+              />
               github.com/BUGS-NYU/freshman-schedge-generator
             </a>
           </p>
         </div>
       </div>
-      <div className={classes.Project}>
-        <h1 className={classes.title}>
-          <a href="https://alberta.ml">
-            Alberta.ml
-          </a>
-        </h1>
-        <img src={alberta} className={classes.image} alt="project img"/>
-        <p className={classes.description}>
-          Alberta is a front-end project for the
-            <a href="https://github.com/BUGS-NYU/schedge" className={classes.link}>
-              Schedge API
-            </a>. It automatically generates schedules for NYU CAS freshmen. We
-          designed this project for new programmers to learn about front-end as
-          well as open source development.
-        </p>
-        <div className={classes.LinkContainer}>
-          <p className={classes.Footer}>
-            <a className={classes.repoLink} href="https://github.com/BUGS-NYU/freshman-schedge-generator">
-              <img src={githubLogo} className={classes.Logo} alt="github logo"/>
-              github.com/BUGS-NYU/freshman-schedge-generator
-            </a>
-          </p>
-        </div>
-      </div>
-
     </div>
   );
 }
