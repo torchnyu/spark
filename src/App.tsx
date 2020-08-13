@@ -7,8 +7,17 @@ import AboutPage from "./AboutPage";
 import NotFoundPage from "./NotFoundPage";
 import ProjectsPage from "./ProjectsPage";
 import JoinUsPage from "./JoinUsPage";
+import MentorPage from './MentorPage';
 
 const useStyles = createUseStyles({
+  '@keyframes scalein': {
+    from: {
+      transform: "scale(0.8)"
+    },
+    to: {
+      transform: "scale(1)"
+    }
+  },
   App: {
     fontFamily: "Source Sans Pro",
     display: "grid",
@@ -20,6 +29,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    animation: '$scalein 1s',
   },
   title: {
     margin: {
@@ -47,6 +57,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     paddingLeft: "20px",
+    animation: '$scalein 1s',
   },
   link: {
     margin: "10px",
@@ -81,14 +92,18 @@ const useStyles = createUseStyles({
     },
     link: {
       textDecoration: "underline",
+      margin: "7px"
     },
     links: {
       margin: {
         top: "0",
-        bottom: "40px"
+        bottom: "40px",
+      },
+      padding: {
+        left: "0"
       },
       flexDirection: "row",
-      fontSize: "0.8rem",
+      fontSize: "0.7rem",
     },
   },
 });
@@ -118,6 +133,9 @@ function App() {
         <Route path="/projects">
           <ProjectsPage/>
         </Route>
+        <Route path="/mentors">
+          <MentorPage/>
+        </Route>
         <Route path="/join">
           <JoinUsPage/>
         </Route>
@@ -132,6 +150,9 @@ function App() {
         </Link>
         <Link to="/projects" className={classes.anchor}>
           <h3 style={styleLink("/projects")} className={classes.link}>Projects</h3>
+        </Link>
+        <Link to="/mentors" className={classes.anchor}>
+          <h3 style={styleLink("/mentors")} className={classes.link}>Mentors</h3>
         </Link>
         <Link to="/join" className={classes.anchor}>
           <h3 style={styleLink("/join")} className={classes.link}>Join Us</h3>
