@@ -1,12 +1,11 @@
-import React, { useState} from "react"
-import {createUseStyles} from "react-jss";
+import React, { useState } from "react";
+import { createUseStyles } from "react-jss";
 import TextField from "@material-ui/core/TextField";
 import Box from "@material-ui/core/Box";
-import {Button} from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import FormControl from "@material-ui/core/FormControl";
-
 
 const useStyles = createUseStyles({
   JoinUsPage: {
@@ -14,14 +13,15 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     alignItems: "center",
     margin: {
-      top: "10vh"
+      top: "10vh",
     },
   },
   container: {
     backgroundColor: "white",
     borderRadius: "5px",
     boxShadow: "2px 3px 18px -6px rgba(0,0,0,0.75)",
-    padding: "40px"
+    padding: "40px",
+    maxWidth: "500px",
   },
   form: {
     display: "flex",
@@ -31,41 +31,42 @@ const useStyles = createUseStyles({
   },
   error: {
     color: "#A30000",
-    padding: "10px"
+    padding: "10px",
   },
   message: {
     color: "#005700",
-    padding: "10px"
+    padding: "10px",
   },
-  '@media(max-width: 1000px)': {
+  "@media(max-width: 1000px)": {
     JoinUsPage: {
       maxWidth: "80vw",
       margin: {
         top: "40px",
-        bottom: "40px"
-      }
-    }
-  }
+        bottom: "40px",
+      },
+    },
+  },
 });
 
-const API_URL = "https://ywhk4gbxs1.execute-api.us-east-1.amazonaws.com/Prod/email";
+const API_URL =
+  "https://ywhk4gbxs1.execute-api.us-east-1.amazonaws.com/Prod/email";
 
 const JoinUsPage = () => {
-  const [email, setEmail] = useState("");
+  const classes = useStyles();
+  /*const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("mentee");
   const [github, setGitHub] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const classes = useStyles();
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     if (email === "" || name === "") {
       setError("Email and name cannot be empty");
       return;
     }
-    if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       setError("Email must be valid");
       return;
     }
@@ -73,20 +74,25 @@ const JoinUsPage = () => {
       setIsSubmitting(true);
       await fetch(API_URL, {
         method: "POST",
-        body: JSON.stringify({name, email, github, role})
+        body: JSON.stringify({ name, email, github, role }),
       });
       setError("");
-      setMessage("Successfully submitted. We'll be in touch")
+      setMessage("Successfully submitted. We'll be in touch");
     } catch (e) {
       console.error(e);
-      setError("Failed to submit. Try again?")
+      setError("Failed to submit. Try again?");
     }
     setIsSubmitting(false);
-  }
-  return <div className={classes.JoinUsPage}>
-    <div className={classes.container}>
-    <h1> Join Us </h1>
-    <form onSubmit={handleSubmit} className={classes.form}>
+  }*/
+  return (
+    <div className={classes.JoinUsPage}>
+      <div className={classes.container}>
+        <h1> Join Us </h1>
+        <p>
+          We're happy that you're interested in joining us! Please email
+          nick@nicholasyang.com for more details
+        </p>
+        {/*<form onSubmit={handleSubmit} className={classes.form}>
       <p>
         We're happy that you're interested in joining us! Please fill out the following form
         and we'll be in touch
@@ -117,9 +123,10 @@ const JoinUsPage = () => {
       <Box m={1}>
         <Button disabled={isSubmitting} variant="contained" color="primary" type="submit"> Submit </Button>
       </Box>
-    </form>
+    </form>*/}
+      </div>
     </div>
-  </div>
-}
+  );
+};
 
 export default JoinUsPage;
