@@ -7,7 +7,7 @@ import ethanP from "./profiles/ethanP.jpg";
 import Mentor from "./Mentor";
 
 const useStyles = createUseStyles({
-  MentorPage: {
+  MentorsPage: {
     display: "grid",
     marginTop: "8vh",
     placeItems: "center",
@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
     maxWidth: "400px",
   },
   "@media(max-width: 1000px)": {
-    MentorPage: {
+    MentorsPage: {
       margin: {
         top: "40px",
         bottom: "40px",
@@ -63,7 +63,7 @@ const Mentors = {
 export default function MentorsPage() {
   const classes = useStyles();
   return (
-    <div className={classes.MentorPage}>
+    <div className={classes.MentorsPage}>
       <div className={classes.mentorInfo}>
         <h1> Mentors </h1>
         <p className={classes.infoParagraph}>
