@@ -92,7 +92,7 @@ export default function ProjectsPage() {
       </div>
       <div className={classes.Project}>
         <h1 className={classes.title}>
-          <a href="https://alberta.ml">Alberta.ml</a>
+          <a href="https://bugs-nyu.github.io/freshman-schedge-generator/" target="blank">Alberta</a>
         </h1>
         <img src={alberta} className={classes.image} alt="project img" />
         <p className={classes.description}>
@@ -112,6 +112,7 @@ export default function ProjectsPage() {
             <a
               className={classes.repoLink}
               href="https://github.com/BUGS-NYU/freshman-schedge-generator"
+              target="blank"
             >
               <img
                 src={githubLogo}
