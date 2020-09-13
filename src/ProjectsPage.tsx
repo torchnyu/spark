@@ -1,6 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import alberta from "./alberta.png";
+import sapphirefire from "./sapphirefire.png"
 import githubLogo from "./GitHub-Mark-32px.png";
 
 const useStyles = createUseStyles({
@@ -92,7 +93,7 @@ export default function ProjectsPage() {
       </div>
       <div className={classes.Project}>
         <h1 className={classes.title}>
-          <a href="https://bugs-nyu.github.io/freshman-schedge-generator/" target="blank">Alberta</a>
+          <a href="https://nyualberta.xyz/" target="blank">Alberta</a>
         </h1>
         <img src={alberta} className={classes.image} alt="project img" />
         <p className={classes.description}>
@@ -120,6 +121,33 @@ export default function ProjectsPage() {
                 alt="github logo"
               />
               github.com/BUGS-NYU/freshman-schedge-generator
+            </a>
+          </p>
+        </div>
+      </div>
+      <div className={classes.Project}>
+        <h1 className={classes.title}>
+          <a href="http://sapphirefire.torchnyu.com/" target="blank">Sapphire Fire</a>
+        </h1>
+        <img src={sapphirefire} className={classes.image} alt="project img" />
+        <p className={classes.description}>
+          Sapphire Fire is a front-end project based off of the popular game, Cards
+          Against Humanity. It utilizes the transcripts of Avatar: the Last Airbender
+          series to create a set of printable and playable cards.
+        </p>
+        <div className={classes.LinkContainer}>
+          <p className={classes.Footer}>
+            <a
+              className={classes.repoLink}
+              href="https://github.com/torchnyu/cards-against-fire-nation"
+              target="blank"
+            >
+              <img
+                src={githubLogo}
+                className={classes.Logo}
+                alt="github logo"
+              />
+              github.com/torchnyu/cards-against-fire-nation
             </a>
           </p>
         </div>
