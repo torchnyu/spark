@@ -36,25 +36,25 @@ const useStyles = createUseStyles({
 const Mentors = {
   "Nicholas Yang": {
     description:
-      "Student at NYU studying Mathematics and Computer Science. Interested in programming languages and compilers. Cloudflare Intern for Fall 2020",
+      "Student at NYU studying Mathematics and Computer Science. Interested in programming languages and compilers. Cloudflare Intern for Fall 2020.",
     githubURL: "https://github.com/NicholasLYang",
     image: nickY,
   },
   "Albert Liu": {
     description:
-      "Albert enjoys python scripting and long walks in Central Park. In his work time he majors in Computer Science at CAS.",
+      "Senior at NYU who enjoys python scripting and long walks in Central Park. Majors in Computer Science. President of BUGS.",
     githubURL: "https://github.com/A1Liu",
     image: albertL,
   },
   "Ethan Printz": {
-    description:
-      "Junior at New York University || Tisch Interactive Media Arts (ITP) and CAS Computer Science",
+    description:    
+      "Junior at NYU. Member of Tisch Interactive Media Arts (ITP) and CAS Computer Science.",
     githubURL: "https://github.com/EthanPrintz",
     image: ethanP,
   },
   "Khanh Nguyen": {
     description:
-      "Sophomore from Vietnam studying Computer Science. BROCKHAMPTON is my all-time favorite boyband. Food and coding fuels my existence",
+      "Junior from Vietnam at NYU. Studying Computer Science. All-time favorite boyband is BROCKHAMPTON. Fueled by food and coding.",
     githubURL: "https://github.com/KN99HN",
     image: khanhng,
   },

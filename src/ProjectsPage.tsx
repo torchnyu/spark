@@ -132,7 +132,7 @@ export default function ProjectsPage() {
         <img src={sapphirefire} className={classes.image} alt="project img" />
         <p className={classes.description}>
           Sapphire Fire is a front-end project based off of the popular game, Cards
-          Against Humanity. It utilizes the transcripts of Avatar: the Last Airbender
+          Against Humanity. It utilizes the transcripts of the Avatar: the Last Airbender
           series to create a set of printable and playable cards.
         </p>
         <div className={classes.LinkContainer}>

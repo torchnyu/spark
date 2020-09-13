@@ -58,7 +58,7 @@ const JoinUsPage = () => {
             {" "}
             this form{" "}
           </a>{" "}
-          and we'll be in touch
+          and we'll be in touch!
         </p>
       </div>
     </div>

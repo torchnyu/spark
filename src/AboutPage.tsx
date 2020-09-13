@@ -62,7 +62,7 @@ export default function AboutPage() {
         </p>
         <p className={classes.paragraph}>
           Some of the technologies we use include React, JavaScript, JSS and
-          many others
+          many others.
         </p>
       </div>
     </div>
