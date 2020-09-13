@@ -4,6 +4,7 @@ import nickY from "./profiles/nickY.jpg";
 import albertL from "./profiles/albertL.jpg";
 import khanhng from "./profiles/khanhng.jpg";
 import ethanP from "./profiles/ethanP.jpg";
+import teoN from "./profiles/teoN.png";
 import Mentor from "./Mentor";
 
 const useStyles = createUseStyles({
@@ -47,7 +48,7 @@ const Mentors = {
     image: albertL,
   },
   "Ethan Printz": {
-    description:    
+    description:
       "Junior at NYU. Member of Tisch Interactive Media Arts (ITP) and CAS Computer Science.",
     githubURL: "https://github.com/EthanPrintz",
     image: ethanP,
@@ -57,6 +58,12 @@ const Mentors = {
       "Junior from Vietnam at NYU. Studying Computer Science. All-time favorite boyband is BROCKHAMPTON. Fueled by food and coding.",
     githubURL: "https://github.com/KN99HN",
     image: khanhng,
+  },
+  "Teo Nys": {
+    description:
+    "Senior at NYU. Majors in Computer Science. Minors in BioMolecular Science. Enjoys front-end development and designing.",
+    githubURL: "https://github.com/nysteo",
+    image: teoN,
   },
 };
 
